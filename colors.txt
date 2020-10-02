@@ -1,6 +1,0 @@
-Red 13
-Blue 10
-Red 5
-Brown 3
-Red 2
-Brown 1
