@@ -1,0 +1,5 @@
+1. Kapppa Statistics ----Find the alg is valid or not
+
+2. Confusion Matrix -----It is used in Machine Learning
+
+3. 

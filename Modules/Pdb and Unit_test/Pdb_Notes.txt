@@ -1,0 +1,13 @@
+1. code should work as per u r expections.
+
+2. b-----Break point
+
+3. p-----print elements
+
+4. c-----continue
+
+5. GNU----> Gnu Not Unix---> Linux
+
+6. gdb---->Gnu DeBugger
+
+7. Pdb---->Python DeBugger

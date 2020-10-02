@@ -1,0 +1,45 @@
+This is the result of elections conducted in an Indian state in the year 2004 ...
+The data is in a seperate file ...
+The data file has 10 columns...
+
+Here is the sample row
+27 Bagalkot Gaddigoudar M BJP 459451 PatilRS M INC 292068
+
+
+columns
+
+1. Serial number 
+2. Constituency 
+3. Winner 
+4. Winner's Gender 
+5. Winner's party 
+6. Votes Secured by the winner 
+7. Runner 
+8. Runner's gender 
+9. Runner's party
+10. Votes Secured by the runner 
+
+
+We need to write a program that reads the data from the file and compute the following ...
+
+
+1. How many seats each party has won?
+2. Who has won with the highest margin?
+3. How many female candidates contested and how many of them actually won?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
