@@ -1,0 +1,33 @@
+m1 = Matrix(number_of_rows, number_of_columns,fill_with=0)
+
+Examples ...
+m1 = Matrix(2,3)
+m1 = Matrix(2,3,fill_with=9)
+
+m1 = Matrix(4,5)
+m1 = Matrix(6,7,fill_with=3)
+
+m1[1,1] = 9 # Should set the value
+item = m1[1,1] # Should return the value at that position
+
+
+m1.getShape() #should resturn a tuple -> 2,3
+m1.rows --> number of rows
+m1.column --> number of columns
+
+m1 == m2 # Should return True if  two matrices are equal -- shapes as well as elements
+m1.isSquare() #Should return True if its square
+m1.isDiagonal() $Should return True if its diagonal
+
+
+** Matrix Operations **
+
+
+
+m3 = m1*m2 #Matrix Multiplication
+m3 = m1 + m2 #Matrix Addition
+
+
+m1.transpose() # Should give the transpose of the matrix
+
+m1.removeRowColumn(row_number,column_number)

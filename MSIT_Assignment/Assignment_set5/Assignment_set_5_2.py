@@ -16,7 +16,7 @@ for i in range(k):
         large_size = directory_size
     directory_size = 0
 
-l = []
+
 #for key in fsizedicr:
 #print ("Folder Size: " + str(round(fsizedicr[key]*large_size, 2)) + " " + key)
 print("Large Directory is " + large_directory)
