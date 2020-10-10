@@ -1,23 +1,28 @@
 # try:
-#     a = 1
-#     b = 0
-#     if b==0:
-#         raise ZeroDivisionError("Denominator does not contains zero Value")
+#     a = [1,2]
+#     n = 1
+#     if n>len(a):
+#         raise IndexError("Outof Range")
 #     else:
-#         print(a/b)
-# except ZeroDivisionError as d:
+#         print(a.index(n))
+# except IndexError as d:
 #     print(d)
 # finally:
 #     print("This is Division Operation")
 
 #
 # try:
-#   f = open("demofile.txt")
-#   f.write("Lorum Ipsum")
-# except:
-#   print("Something went wrong when writing to the file")
+#   a=2
+#   b=0
+#   if b==0:
+#     raise ZeroDivisionError("Divi")
+#   else:
+#     print(a/b)
+# except ZeroDivisionError as d:
+#   print(d)
 # finally:
-#   f.close()
+#   print("result")
+
 
 
 # try:
@@ -30,11 +35,68 @@
 # except:
 #     print("Error")
 
-class Networkerror(RuntimeError):
-   def __init__(self, arg):
-      self.args = arg
+# class Networkerror(RuntimeError):
+#    def __init__(self, arg):
+#       self.args = arg
+#
+# try:
+#    raise Networkerror("Bad hostname")
+# except Networkerror as e:
+#    print(e.args)
 
+# class MinimumSalary(Exception):
+#     def __init__(self, n):
+#         self.n = n
+#
+#     def __str__(self):
+#         print("Minimum Salary nedd 20000 for aprove Loan Amount")
+#
+#
+# n = 10000
+# if not n>20000:
+#     raise MinimumSalary(n)
+
+
+
+# try:
+#     a = 1
+#     b = 0
+#     if b==0:
+#         raise ZeroDivisionError("Not divisible by zero")
+# except ZeroDivisionError as e:
+#     print(e)
+# else:
+#     print(a/b)
+# finally:
+#     print("Exceuted")
+
+
+
+# class Ravi:
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def __dir__(self):
+#         return self.name
+#
+# name = "kalyan"
+# ob = Ravi(name)
+# print(dir(ob))
+
+# try:
+#     a = 10
+#     b = 1
+#     print(a/b)
+# except:
+#     print("Zero by division")
+# else:
+#     print(a/b)
+
+
+f = open("records.txt","r")
 try:
-   raise Networkerror("Bad hostname")
-except Networkerror as e:
-   print(e.args)
+    f.write("I am Ravi")
+except:
+    f.close()
+finally:
+    print("kalyan")
