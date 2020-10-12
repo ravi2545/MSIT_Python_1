@@ -1,0 +1,37 @@
+MySql:(I am Using Ubuntu 18.04)
+    1. sudo apt-get install mysql-server
+    2. sudo mysql_secure_installation
+    3. sudo apt-get update
+
+--------------------------------------------Enter mysql Database------------
+    $mysql -u root -p
+--------------------------------------------Display---All---databases---------
+    mysql>show  databases;
+
+
+--------------------------------------------Use----Database------------
+    mysql>use mysql;
+
+
+--------------------------------------------Create database-------------
+    $mysqladmin -u root -p create TUTORIALS
+
+
+-------------------------Display----All----tables in a Database----------
+    mysql>show tables from database_name;
+    example:mysql>show tables from kalyan;
+            +------------------+
+| Tables_in_kalyan |
++------------------+
+| Bikes            |
+| sport_bikes      |
++------------------+
+
+----------------------------------------Display ALl columns in a table-------
+    mysql>show columns from table_name;
+
+----------------------------------CREATING TABLES----------------------------
+mysql>CREATE TABLE table_name(NAME VARCHAR(20), ID INT NOT NULL, age INT NOT NULL, PRIMERY KEY(ID));
+
+----------------------------------INSERTING TABLES---------------------------
+mysql>INSERT INTO table_name(NAME, ID, age) VALUES("kalyan", 25, "22");
