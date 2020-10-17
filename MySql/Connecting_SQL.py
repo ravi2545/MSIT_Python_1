@@ -77,22 +77,49 @@ class MY_DataBase:
 
         return languages
 
-    def Create_table(self,Table_name):
+    def Create_table(self, Table_name):
         try:
-            self.cur.execute("CREATE TABLE {}(ID INT, NAME VARCHAR(20), SALARY INT, DEP VARCHAR(20))".format(Table_name))
+            self.cur.execute(
+                "CREATE TABLE {}(ID INT, NAME VARCHAR(20), SALARY INT, DEP VARCHAR(20))".format(Table_name))
         except:
             self.myconn.close()
-
 
     def Insert_data(self, tname):
         try:
             sql = "INSERT INTO {}(ID,NAME,SALARY,DEP) VALUES(%s,%s,%s,%s)".format(tname)
-            val = (1, "Kalyan", 25000, "IT")
-            self.cur.execute(sql,val)
+            val = (4, "Vidya", 29000, "Backend")
+            self.cur.execute(sql, val)
             self.myconn.commit()
 
         except:
             self.myconn.rollback()
+
+    def Fetch_data(self,tname):
+        try:
+            self.cur.execute("SELECT * FROM {}".format(tname))
+        except:
+            self.myconn.rollback()
+        result = self.cur.fetchall()
+        return result
+
+    def Inner_Join(self):
+        try:
+            self.cur.execute("SELECT TCS.NAME,AMAZON.NAME FROM TCS INNER JOIN AMAZON ON TCS.ID=AMAZON.ID")
+        except:
+            self.myconn.rollback()
+        result = self.cur.fetchall()
+        return result
+
+
+    def LeftJoin(self):
+        try:
+            self.cur.execute("SELECT TCS.ID,NAME,SALARY FROM TCS LEFT JOIN AMAZON ON TCS.ID=AMAZON.ID")
+        except:
+            self.myconn.rollback()
+
+        result = self.cur.fetchall()
+        return result
+
 
 
 
@@ -105,12 +132,20 @@ obj = MY_DataBase()
 # print(obj.Table_data())
 
 # print(obj.show_data(table_name))
-#print(obj.Extract())
+# print(obj.Extract())
 
-#------------------------------------------CREATE TABLE
+# ------------------------------------------CREATE TABLE
 # name = 'AMAZON'
 # print(obj.Create_table(name))
 
-#------------------------------------------INSERT DATA
-tname = "TCS"
-print(obj.Insert_data(tname))
+# ------------------------------------------INSERT DATA
+# tname = "AMAZON"
+# print(obj.Insert_data(tname))
+#-------------------------------------------Fetch Data
+# t_name = "TCS"
+# print(obj.Fetch_data(t_name))
+#------------------------------------------JOINings
+#print(obj.Inner_Join())
+
+#------------------------------------------LEFT JOIN
+print(obj.LeftJoin())

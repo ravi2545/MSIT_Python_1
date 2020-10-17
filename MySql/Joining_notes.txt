@@ -1,0 +1,72 @@
+SELECT TCS.NAME, AMAZON.ID FROM TCS LEFT JOIN AMAZON ON TCS.ID = AMAZON.ID;
+
+ORDER BY TCS.NAME
+
+
++--------------+--------+------+
+| NAME         | SALARY | ID   |
++--------------+--------+------+
+| Kalyan       |  25000 |    1 |
+| Laxmi        |  25000 |    2 |
+| Laxmi Kalyan |  25000 |    3 |
++--------------+--------+------+
+
+TCS
++------+--------------+--------+------+
+| ID   | NAME         | SALARY | DEP  |
++------+--------------+--------+------+
+|    1 | Kalyan       |  25000 | IT   |
+|    2 | Laxmi        |  25000 | IT   |
+|    3 | Laxmi Kalyan |  25000 | IT   |
++------+--------------+--------+------+
+
+
+AMAZON
++------+---------+--------+----------+
+| ID   | NAME    | SALARY | DEP      |
++------+---------+--------+----------+
+|    1 | Baba    |  25000 | IT       |
+|    2 | Ram     |  25000 | IT       |
+|    3 | Kalyani |  25000 | Frontend |
+|    4 | Vidya   |  29000 | Backend  |
++------+---------+--------+----------+
+
+
+
+
+
+
+SELECT TCS.NAME, AMAZON.ID FROM TCS RIGHT JOIN AMAZON ON TCS.ID = AMAZON.ID;
+
+
+
++--------------+------+
+| NAME         | ID   |
++--------------+------+
+| Kalyan       |    1 |
+| Laxmi        |    2 |
+| Laxmi Kalyan |    3 |
+| NULL         |    4 |
++--------------+------+
+4 rows in set (0.00 sec)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
