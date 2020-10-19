@@ -94,7 +94,7 @@ class MY_DataBase:
         except:
             self.myconn.rollback()
 
-    def Fetch_data(self,tname):
+    def Fetch_data(self, tname):
         try:
             self.cur.execute("SELECT * FROM {}".format(tname))
         except:
@@ -110,7 +110,6 @@ class MY_DataBase:
         result = self.cur.fetchall()
         return result
 
-
     def LeftJoin(self):
         try:
             self.cur.execute("SELECT TCS.ID,NAME,SALARY FROM TCS LEFT JOIN AMAZON ON TCS.ID=AMAZON.ID")
@@ -119,8 +118,6 @@ class MY_DataBase:
 
         result = self.cur.fetchall()
         return result
-
-
 
 
 mydatabase = 'kalyan'
@@ -141,11 +138,11 @@ obj = MY_DataBase()
 # ------------------------------------------INSERT DATA
 # tname = "AMAZON"
 # print(obj.Insert_data(tname))
-#-------------------------------------------Fetch Data
+# -------------------------------------------Fetch Data
 # t_name = "TCS"
 # print(obj.Fetch_data(t_name))
-#------------------------------------------JOINings
-#print(obj.Inner_Join())
+# ------------------------------------------JOINings
+# print(obj.Inner_Join())
 
-#------------------------------------------LEFT JOIN
+# ------------------------------------------LEFT JOIN
 print(obj.LeftJoin())
