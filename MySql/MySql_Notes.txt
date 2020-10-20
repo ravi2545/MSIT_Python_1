@@ -1,3 +1,8 @@
+NOTE:
+The default table type in MySQL is MyISAM. If you are trying to use a table type that is not compiled-in or activated,
+MySQL will instead create a table of type MyISAM.
+
+
 MySql:(I am Using Ubuntu 18.04)
     1. sudo apt-get install mysql-server
     2. sudo mysql_secure_installation
@@ -35,3 +40,53 @@ mysql>CREATE TABLE table_name(NAME VARCHAR(20), ID INT NOT NULL, age INT NOT NUL
 
 ----------------------------------INSERTING TABLES---------------------------
 mysql>INSERT INTO table_name(NAME, ID, age) VALUES("kalyan", 25, "22");
+
+
+
+#-------------------------------------------------------------What is MySQL?
+It is an RDBMS (Relational Database Management System) and works primarily on the relational database model.
+It makes database administration easier and more flexible.
+
+
+Port :
+        3306 Default
+
+Fast, easy and reliable.
+Can be used for both large and small applications.
+Provides high scalablity
+
+
+---->It is ACID complaint only when using with InnoDB and NDB cluster engines.
+---->It does not support CASCADE option.
+---->It does not support partial, bitmap and expression indexes.
+---->It doesn’t provide support for Materialised views and Table inheritance.
+---->SQL only support Standard data types.
+---->SQL provides limited MVCC support ( in InnoDB)
+---->while MySQL only supports JSON.
+
+
+
+
+
+A transaction is a single logical unit of work which accesses and possibly modifies the contents of a database. Transactions access data using read and write operations.
+In order to maintain consistency in a database, before and after the transaction, certain properties are followed. These are called ACID properties.
+
+MYISAM:
+ISAM (an acronym for indexed sequential access method) is a method for creating, maintaining, and manipulating computer files of data so that records can be retrieved sequentially or randomly by one or more keys.
+Indexes of key fields are maintained to achieve fast retrieval of required file records in Indexed files.
+IBM originally developed ISAM for mainframe computers, but implementations are available for most computer systems.
+
+
+
+#--------------------------------------Create User
+mysql>CREATE USER IF NOT EXISTS name@localhost INDENTIFIED BY 'password';
+mysql>SHOW GRANTS FOR ram@localhost;
+mysql>GRANT SELECT ON *.* TO prasad@localhost;
+
+
+#-------------------------------------BackUp data from mysql to .sql
+ravi@ravi$:mysqldump -u root -p databasename>filename.sql
+
+#-------------------------------------Convert .sql file to database
+ravi@ravi$:mysqldump -u root -p databasename<filename.sql
+

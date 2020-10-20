@@ -1,0 +1,41 @@
+#-----------------------------------------------------What is PostgreSql?
+It a powerful, open-source Object-relational database system.
+It provides good performance with low maintenance efforts because of its high stability.
+PostgreSQL was the first DBMS that implemented multi-version concurrency control (MVCC) feature.
+Some of the highlights of PostgreSQL are:
+
+Support for vast amount of languages.
+It procies advanced Security features.
+It has geo-tagging support.
+
+psql-----PORT----5432
+
+---->It is ACID complaint from the ground up.
+---->CASCADE option is supported.
+---->It supports all of these
+---->provide support for Materialised views and Table inheritance.
+---->It support Advanced data types such as arrays, hstore and user defined types.
+---->Full MVCC support.
+---->PostgreSQL support modern applications feature like JSON, XML etc.
+---->PostgreSQL performance well when executing complex queries
+---->PostgreSQL is complete ACID compliant
+
+#------------------------------------------------------------------------------
+1. -----------Select postgresql
+ravi@ravi:$ su - postgres or psql
+
+2. -----------Show Databases
+ravi# \l
+
+3. -----------Use database
+ravi# \c database name
+example: \c ipl
+
+
+4. ----------Show Table Names in that databases
+ravi# \dt
+
+
+5. ----------Describe table
+ravi# \d+ tablename
+
